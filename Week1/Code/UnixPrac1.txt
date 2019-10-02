@@ -1,0 +1,39 @@
+# Q1 Count how many lines are in each file
+
+# Use "wc -l" to print the line counts of a file
+# 1.1 407228326.fasta
+cat 407228326.fasta | wc -l
+# 1.2 407228412.fasta
+cat 407228412.fasta | wc -l
+# 1.3 E.coli.fasta
+cat E.coli.fasta | wc -l
+
+# Q2 Print everything starting from the second line for the E. coli genome
+
+# use "head" to choose the first two lines and "tail" to pick the second one
+cat E.coli.fasta | head -2 | tail -1
+
+# Q3 Count the sequence length of this genome
+
+# use wc -m to count the characters of sequence
+# note that the genome start from the second line, so use tail to remove first line
+# also remove the newline characters
+cat E.coli.fasta | tail -n +2 | tr -d '\n' | wc -m
+
+# Q4 Count the matches of "ATGC" in E. coli
+
+# after choosing from second line and remove newline characters,
+# use "grep -o" to find all the matches of ATGC listed in lines
+# then count the number of lines of "ATGC" using "wc -l"
+cat E.coli.fasta | tail -n +2 | tr -d '\n' | grep -o ATGC | wc -l
+
+# Q5 Compute the AT/GC ratio
+
+# AT/GC ratio equals to the number of "A"s and "T"s divided by the number of "G"s and "C"s
+# grep two letters at once
+# set those numbers to be variable "x" and "y"
+# use "bc -l" to calculate percentage in bash
+x=`cat E.coli.fasta | tail -n +2 | tr -d '\n' | grep -o 'A\|T' | wc -l`
+y=`cat E.coli.fasta | tail -n +2 | tr -d '\n' | grep -o 'G\|C' | wc -l`
+echo "$x/$y" | bc -l
+# the results should be 0.969...
