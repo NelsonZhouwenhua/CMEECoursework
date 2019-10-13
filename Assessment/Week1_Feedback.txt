@@ -1,0 +1,395 @@
+Starting weekly assessment for Wenhua, Week1
+
+Current Points = 100
+
+Note that: 
+(1) Major sections begin with a double "====" line 
+(2) Subsections begin with a single "====" line 
+(3) Code output or text file content are printed within single "*****" lines 
+
+======================================================================
+======================================================================
+Your Git repo size this week is about 4.00 MiB on disk 
+
+PART 1: Checking project workflow...
+
+Found the following directories in parent directory: Week1, Assessment, Week2, .git
+
+Found the following files in parent directory: README.txt, .gitignore
+
+Checking for key files in parent directory...
+
+Found .gitignore in parent directory, great! 
+
+Printing contents of .gitignore:
+**********************************************************************
+*~ 
+*.tmp
+*.tif
+**********************************************************************
+
+Found README in parent directory, named: README.txt
+
+Printing contents of README.txt:
+**********************************************************************
+My CMEE Coursework Repository
+
+Author : Wenhua Zhou (wz2812@ic.ac.uk)
+
+This repository includes all the coursework I have done from the course MRes in Computational Methods in Ecology and Evolution. 
+
+This course begins in October 2019 and ends in September 2020. 
+
+Every week I will update the work I did including the practicals and miniprojects.
+
+Hopefully I can learn more about programming this year, and this repository can also be useful in the future.
+
+
+**********************************************************************
+
+======================================================================
+Looking for the weekly directories...
+
+Found 2 weekly directories: Week1, Week2
+
+The Week1 directory will be assessed 
+
+======================================================================
+======================================================================
+PART 2: Checking weekly code and workflow...
+
+======================================================================
+Assessing WEEK1...
+
+Found the following directories: Code, Data, Sandbox, Results
+
+Found the following files: 
+
+Checking for readme file in weekly directory...
+
+README file missing, 1 pt deducted
+
+Current Points = 99
+
+Found following files in results directory: ...
+
+Found 10 code files: ConcatenateTwoFiles.sh, .txt, CountLines.sh, variables.sh, tiff2png.sh, csvtospace.sh, MyExampleScript.sh, UnixPrac1.txt, tabtocsv.sh, boilerplate.sh
+
+======================================================================
+Testing script/code files...
+
+======================================================================
+Inspecting script file ConcatenateTwoFiles.sh...
+
+File contents are:
+**********************************************************************
+#!/bin/bash
+
+cat $1 > $3
+cat $2 >> $3
+echo "Merged File is"
+cat $3**********************************************************************
+
+Testing ConcatenateTwoFiles.sh...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+Merged File is
+
+**********************************************************************
+
+Encountered error (or warning):
+ConcatenateTwoFiles.sh: line 3: $3: ambiguous redirect
+ConcatenateTwoFiles.sh: line 4: $3: ambiguous redirect
+
+======================================================================
+Inspecting script file .txt...
+
+File contents are:
+**********************************************************************
+**********************************************************************
+
+Testing .txt...
+
+======================================================================
+Inspecting script file CountLines.sh...
+
+File contents are:
+**********************************************************************
+#!/bin/bash
+
+NumLines=`wc -l < $1`
+echo "The file $1 has $NumLines lines"
+echo**********************************************************************
+
+Testing CountLines.sh...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+The file  has  lines
+
+
+**********************************************************************
+
+Encountered error (or warning):
+CountLines.sh: line 3: $1: ambiguous redirect
+
+======================================================================
+Inspecting script file variables.sh...
+
+File contents are:
+**********************************************************************
+#!/bin/bash
+
+# Shows the use of variables
+MyVar='some string'
+echo 'the current value of the variable is' $MyVar
+echo 'Please enter a new string'
+read MyVar
+echo 'the current value of the variable is' $MyVar
+
+## Reading multiple values
+echo 'Enter two numbers separated by space(s)'
+read a b
+echo 'you entered' $a 'and' $b '. Their sum is:'
+mysum=`expr $a + $b`
+echo $mysum**********************************************************************
+
+Testing variables.sh...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+the current value of the variable is some string
+Please enter a new string
+the current value of the variable is
+Enter two numbers separated by space(s)
+you entered and . Their sum is:
+
+
+**********************************************************************
+
+Encountered error (or warning):
+expr: syntax error
+
+======================================================================
+Inspecting script file tiff2png.sh...
+
+File contents are:
+**********************************************************************
+#!/bin/bash
+
+for f in *.tif; 
+    do  
+        echo "Converting $f"; 
+        convert "$f"  "$(basename "$f" .tif).jpg"; 
+    done
+**********************************************************************
+
+Testing tiff2png.sh...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+Converting *.tif
+
+**********************************************************************
+
+Encountered error (or warning):
+convert: unable to open image `*.tif': No such file or directory @ error/blob.c/OpenBlob/2712.
+convert: no images defined `*.jpg' @ error/convert.c/ConvertImageCommand/3210.
+
+======================================================================
+Inspecting script file csvtospace.sh...
+
+File contents are:
+**********************************************************************
+#!/bin/bash
+# Author: Wenhua Zhou wz2812@ic.ac.uk
+# Script: csvtospace.sh
+# Description: substitute the commas in the files with space
+#
+# Saves the output into a .csv file
+# Arguments: 1 -> input variable, csv file
+# Date: Oct 2019
+
+echo "Creating a space delimited version of $1 ..."
+# convert csv into space separated values and write into a new txt file
+cat $1 | tr -s "," " " >> $1.txt
+echo "Done!"
+exit**********************************************************************
+
+Testing csvtospace.sh...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+Creating a space delimited version of  ...
+Done!
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00390s
+
+======================================================================
+Inspecting script file MyExampleScript.sh...
+
+File contents are:
+**********************************************************************
+#!/bin/bash
+
+msg1="Hello"
+msg2=$USER
+echo "$msg1 $msg2"
+echo "Hello $USER"
+echo
+**********************************************************************
+
+Testing MyExampleScript.sh...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+Hello mhasoba
+Hello mhasoba
+
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00294s
+
+======================================================================
+Inspecting script file UnixPrac1.txt...
+
+File contents are:
+**********************************************************************
+# Q1 Count how many lines are in each file
+
+# Use "wc -l" to print the line counts of a file
+# 1.1 407228326.fasta
+cat 407228326.fasta | wc -l
+# 1.2 407228412.fasta
+cat 407228412.fasta | wc -l
+# 1.3 E.coli.fasta
+cat E.coli.fasta | wc -l
+
+# another method can count lines for all files in one line
+find . -name '*.fasta' | xargs wc -l
+
+# Q2 Print everything starting from the second line for the E. coli genome
+
+# use "head" to choose the first two lines and "tail" to pick the second one
+cat E.coli.fasta | tail -n +2
+
+# Q3 Count the sequence length of this genome
+
+# use wc -m to count the characters of sequence
+# note that the genome start from the second line, so use tail to remove first line
+# also remove the newline characters
+cat E.coli.fasta | tail -n +2 | tr -d '\n' | wc -m
+
+# Q4 Count the matches of "ATGC" in E. coli
+
+# after choosing from second line and remove newline characters,
+# use "grep -o" to find all the matches of ATGC listed in lines
+# then count the number of lines of "ATGC" using "wc -l"
+cat E.coli.fasta | tail -n +2 | tr -d '\n' | grep -o ATGC | wc -l
+
+# Q5 Compute the AT/GC ratio
+
+# AT/GC ratio equals to the number of "A"s and "T"s divided by the number of "G"s and "C"s
+# grep two letters at once
+# set those numbers to be variable "x" and "y"
+# use "bc -l" to calculate percentage in bash
+x=`cat E.coli.fasta | tail -n +2 | tr -d '\n' | grep -o 'A\|T' | wc -l` && 
+y=`cat E.coli.fasta | tail -n +2 | tr -d '\n' | grep -o 'G\|C' | wc -l` &&
+echo "$x/$y" | bc -l
+# the result is 0.969...
+**********************************************************************
+
+Testing UnixPrac1.txt...
+
+======================================================================
+Inspecting script file tabtocsv.sh...
+
+File contents are:
+**********************************************************************
+#!/bin/bash
+# Author: Wenhua Zhou wz2812@ic.ac.uk
+# Script: tabtocsv.sh
+# Description: substitute the tabs in the files with commas
+#
+# Saves the output into a .csv file
+# Arguments: 1 -> tab delimited file
+# Date: Oct 2019
+
+echo "Creating a comma delimited version of $1 ..."
+cat $1 | tr -s "\t" "," >> $1.csv
+echo "Done!"
+exit**********************************************************************
+
+Testing tabtocsv.sh...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+Creating a comma delimited version of  ...
+Done!
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00430s
+
+======================================================================
+Inspecting script file boilerplate.sh...
+
+File contents are:
+**********************************************************************
+#!/bin/bash
+# Author: wz2812@ic.ac.uk
+# Script: boilerplate.sh
+# Desc: simple boilerplate for shell scripts
+# Arguments: none
+# Date: Oct 2019
+
+echo -e "\nThis is a shell script! \n" #what does -e do? treat '\n' as newline character
+
+#exit**********************************************************************
+
+Testing boilerplate.sh...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+This is a shell script! 
+
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00335s
+
+======================================================================
+======================================================================
+Finished running scripts
+
+Ran into 4 errors
+
+======================================================================
+======================================================================
+
+FINISHED WEEKLY ASSESSMENT
+
+Current Points for the Week = 99
+
+NOTE THAT THESE ARE POINTS, NOT MARKS FOR THE WEEK!
