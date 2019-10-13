@@ -60,7 +60,7 @@ my_best_score = -1
 for i in range(l1): # Note that you just take the last alignment with the highest score
     z = calculate_score(s1, s2, l1, l2, i)
     if z > my_best_score:
-        my_best_align = "." * i + s2 # think about what this is doing!
+        my_best_align = "." * i + s2 # use dots to match the position of alignment with the longer sequence
         my_best_score = z 
 
 # print the best alignment and longer sequence

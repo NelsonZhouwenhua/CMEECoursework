@@ -11,4 +11,5 @@ birds = ( ('Passerculus sandwichensis','Savannah sparrow',18.7),
 
 # use for loop or comprehension to print the tuple into separate lines
 for i in birds:
-    print (i[0] + ' , ' + i[1] + ' , ' + str(i[2]) + '\n')
+    print ('('+ i[0] + ' , ' + i[1] + ' , ' + str(i[2]) +')'+ '\n') # for loop is used 
+    # each line of elements are printed out with commas and newline character

@@ -1,3 +1,4 @@
+'''change the output so that all best alignments are recorded'''
 # load two sequences from the csv in data directory
 import csv
 
@@ -57,6 +58,8 @@ def calculate_score(s1, s2, l1, l2, startpoint):
 my_best_align = []
 my_best_score = -1
 
+import pickle
+'''use pickle to record the best alignments into .p file and load again'''
 for i in range(l1): # Note that you just take the last alignment with the highest score
     z = calculate_score(s1, s2, l1, l2, i)
     if z > my_best_score:
@@ -73,3 +76,15 @@ for i in my_best_align:
 print("The long sequence:")
 print(s1)
 print("Best score:", my_best_score)
+
+# put the best alignments into the results directory as best_align.p
+f = open('../results/best_align.p','wb')
+pickle.dump(my_best_align, f)
+f.close()
+
+## Load the data again
+f = open('../results/best_align.p','rb')
+best_align = pickle.load(f)
+f.close()
+
+print(best_align)

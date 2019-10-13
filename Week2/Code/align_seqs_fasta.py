@@ -1,7 +1,7 @@
 import sys
 
 # define a function to read two sequences from separate fasta files 
-def read_fasta(f = open('../../Week1/Data/407228412.fasta')):
+def read_fasta(f):
     seq = []
     # forloop through the lines to output the sequence only
     for line in f:
@@ -12,8 +12,12 @@ def read_fasta(f = open('../../Week1/Data/407228412.fasta')):
     return(combine_seq)
 
 # import two fasta files from command line
-f1 = open(sys.argv[1])
-f2 = open(sys.argv[2])
+if len(sys.argv) == 3:
+    f1 = open(sys.argv[1])
+    f2 = open(sys.argv[2])
+elif len(sys.argv) == 1: # if no input is given
+    f1 = open('../../Week1/Data/407228326.fasta')
+    f2 = open('../../Week1/Data/407228412.fasta')
 
 # use read_fasta to load as sequence
 seq1 = read_fasta(f1)
@@ -46,7 +50,6 @@ def calculate_score(s1, s2, l1, l2, startpoint):
                 matched = matched + "-"
 
     # some formatted output
-
     # not necessary to print these in the functions if we only want the results
     # print("." * startpoint + matched)           
     # print("." * startpoint + s2)
@@ -56,10 +59,6 @@ def calculate_score(s1, s2, l1, l2, startpoint):
 
     return score
 
-# Test the function with some example starting points:
-# calculate_score(s1, s2, l1, l2, 0)
-# calculate_score(s1, s2, l1, l2, 1)
-# calculate_score(s1, s2, l1, l2, 5)
 
 # now try to find the best match (highest score) for the two sequences
 my_best_align = None
@@ -70,6 +69,10 @@ for i in range(l1): # Note that you just take the last alignment with the highes
     if z > my_best_score:
         my_best_align = "." * i + s2 # think about what this is doing!
         my_best_score = z 
-print(my_best_align)
-print(s1)
+
+# no need to print best alignment and s1 cause they are too long!
+# print(my_best_align)
+# print(s1)
+
+# print best score only is good enough
 print("Best score:", my_best_score)
