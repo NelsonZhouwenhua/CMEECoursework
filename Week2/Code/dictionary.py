@@ -1,3 +1,13 @@
+#!/usr/bin/env python3
+
+"""Python practical:
+populate a dictionary with different sets of taxa
+"""
+
+__appname__ = 'dictionary.py'
+__author__ = 'Wenhua Zhou (wz2812@ic.ac.uk)'
+__version__ = '0.0.1'
+
 taxa = [ ('Myotis lucifugus','Chiroptera'),
          ('Gerbillus henleyi','Rodentia',),
          ('Peromyscus crinitus', 'Rodentia'),

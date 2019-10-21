@@ -1,3 +1,9 @@
+"""combination of the previous 3 scripts, read and save files"""
+
+__appname__ = 'basic_io.py'
+__author__ = 'Wenhua Zhou (wz2812@ic.ac.uk)'
+
+
 #############################
 # FILE INPUT
 #############################

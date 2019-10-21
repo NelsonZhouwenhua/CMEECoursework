@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 
-"""Some functions exemplifying the use of control statements"""
+"""python script to test even_or_odd function in control_flow.py 
+"""
 
-__author__ = 'Your Name (Your.Name@your.email.address)'
+__author__ = 'Wenhua Zhou(wz2812@ic.ac.uk)'
 __version__ = '0.0.1'
 
 import sys

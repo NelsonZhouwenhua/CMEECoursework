@@ -1,3 +1,15 @@
+#!/usr/bin/env python3
+
+"""Python Practical: Align DNA sequences
+convert from the align_seqs.py but define a function to read sequence in fasta files
+change output as best score only since sequence are too long to compare
+but it can also find the best alignment and score
+"""
+
+__appname__ = 'align_seqs_fasta.py'
+__author__ = 'Wenhua Zhou (wz2812@ic.ac.uk)'
+__version__ = '0.0.1'
+
 import sys
 
 # define a function to read two sequences from separate fasta files 

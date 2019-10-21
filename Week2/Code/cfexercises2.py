@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 
-__author__ = 'Wenhua Zhou(wz2812@ic.ac.uk)'
+""" Python practical:
+python script with modified loops of the original example
+"""
+
+__appname__ = 'cfexercises2.py'
+__author__ = 'Wenhua Zhou (wz2812@ic.ac.uk)'
 __version__ = '0.0.1'
 
 import sys

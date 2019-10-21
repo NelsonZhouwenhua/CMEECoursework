@@ -1,3 +1,12 @@
+#!/usr/bin/env python3
+
+""" python script using examples to introduce properties of global variables
+"""
+
+__appname__ = 'scope.py'
+__author__ = 'Wenhua Zhou (wz2812@ic.ac.uk)'
+__version__ = '0.0.1'
+
 ## Global Block 1 
 
 _a_global = 10 # a global variable

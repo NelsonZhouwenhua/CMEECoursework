@@ -1,3 +1,13 @@
+#!/usr/bin/env python3
+
+"""Python practical:
+create filtered lists by for loops and line comprehensions
+"""
+
+__appname__ = 'lc2.py'
+__author__ = 'Wenhua Zhou (wz2812@ic.ac.uk)'
+__version__ = '0.0.1'
+
 # Average UK Rainfall (mm) for 1910 by month
 # http://www.metoffice.gov.uk/climate/uk/datasets
 rainfall = (('JAN',111.4),

@@ -1,3 +1,8 @@
+"""python script to open a file and print lines(skip blank lines) in that file"""
+
+__appname__ = 'basic_io1.py'
+__author__ = 'Wenhua Zhou (wz2812@ic.ac.uk)'
+
 #############################
 # FILE INPUT
 #############################

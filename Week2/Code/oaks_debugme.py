@@ -1,3 +1,16 @@
+#!/usr/bin/env python3
+
+"""Python Practical: missing oaks problem
+fix the bug of misspelling
+write a doctest to make sure of no bug
+rewrite the is_an_oak function so that only 'quercus' not any genus startswith 'quercus' will be considered as an oak
+remove header when read csv and put header into out put file
+"""
+
+__appname__ = 'oaks_debugme.py'
+__author__ = 'Wenhua Zhou (wz2812@ic.ac.uk)'
+__version__ = '0.0.1'
+
 import csv
 import sys
 import doctest # Import the doctest module

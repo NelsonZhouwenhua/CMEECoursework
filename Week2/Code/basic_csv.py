@@ -1,3 +1,8 @@
+"""python script to read csv files"""
+
+__appname__ = 'basic_csv.py'
+__author__ = 'Wenhua Zhou (wz2812@ic.ac.uk)'
+
 import csv
 
 # Read a file containing:

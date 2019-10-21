@@ -1,3 +1,8 @@
+"""python script to save the elements into a file"""
+
+__appname__ = 'basic_io2.py'
+__author__ = 'Wenhua Zhou (wz2812@ic.ac.uk)'
+
 #############################
 # FILE OUTPUT
 #############################

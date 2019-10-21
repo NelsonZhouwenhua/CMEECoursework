@@ -1,3 +1,15 @@
+#!/usr/bin/env python3
+
+"""Python Practicals: Align DNA sequences
+convert from the original align_seqs.py from repository,
+read csv files including the two example sequences originally given
+and find the best alignment and score
+"""
+
+__appname__ = 'align_seqs.py'
+__author__ = 'Wenhua Zhou (wz2812@ic.ac.uk)'
+__version__ = '0.0.1'
+
 # load two sequences from the csv in data directory
 import csv
 

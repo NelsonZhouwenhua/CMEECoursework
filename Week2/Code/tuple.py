@@ -1,3 +1,13 @@
+#!/usr/bin/env python3
+
+"""Python practical
+print out tuples in separate lines
+"""
+
+__appname__ = 'tuple.py'
+__author__ = 'Wenhua Zhou (wz2812@ic.ac.uk)'
+__version__ = '0.0.1'
+
 birds = ( ('Passerculus sandwichensis','Savannah sparrow',18.7),
           ('Delichon urbica','House martin',19),
           ('Junco phaeonotus','Yellow-eyed junco',19.5),

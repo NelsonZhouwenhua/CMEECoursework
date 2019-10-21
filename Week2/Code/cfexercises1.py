@@ -1,5 +1,16 @@
 #!/usr/bin/env python3
 
+""" Python practical:
+after practicals work, it is modified and the output is evaluated automatically
+the input variables are:
+print(foo_1(10))
+print(foo_2(10,2))
+print(foo_3(30,20,10))
+print(foo_4(10))
+print(foo_5(10))
+print(foo_6(10))
+"""
+
 __author__ = 'Wenhua Zhou (wz2812@ic.ac.uk)'
 __version__ = '0.0.1'
 

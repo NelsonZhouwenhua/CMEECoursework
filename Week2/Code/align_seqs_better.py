@@ -1,4 +1,14 @@
-'''change the output so that all best alignments are recorded'''
+#!/usr/bin/env python3
+
+"""Python Practical: Align DNA sequences
+change the output so that all best alignments are recorded
+use pickle to record the best alignments into .p file and load again
+"""
+
+__appname__ = 'align_seqs_better.py'
+__author__ = 'Wenhua Zhou (wz2812@ic.ac.uk)'
+__version__ = '0.0.1'
+
 # load two sequences from the csv in data directory
 import csv
 

@@ -1,3 +1,9 @@
+"""python script to store the object for later use and then load into"""
+
+__appname__ = 'basic_io3.py'
+__author__ = 'Wenhua Zhou (wz2812@ic.ac.uk)'
+
+
 #############################
 # STORING OBJECTS
 #############################
