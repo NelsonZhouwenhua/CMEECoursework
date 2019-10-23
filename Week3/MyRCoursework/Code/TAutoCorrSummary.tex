@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{TAutoCorr.R Summary}
+\author{Wenhua Zhou(wz2812@ic.ac.uk)}
+\date{October 2019}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage[svgnames]{xcolor}
+
+\begin{document}
+
+\maketitle
+
+\section{Original code}
+\lstset{language=R,
+    basicstyle=\small\ttfamily,
+    stringstyle=\color{DarkGreen},
+    otherkeywords={0,1,2,3,4,5,6,7,8,9},
+    morekeywords={TRUE,FALSE},
+    deletekeywords={data,frame,length,as,character},
+    keywordstyle=\color{blue},
+    commentstyle=\color{DarkGreen},
+    frame=single,
+    numberstyle=\tiny,
+    numbersep=5pt,
+    breaklines=true
+}
+\begin{lstlisting}[caption=Source code for TAutoCorr.R(including comments)]
+# R practicals
+# read data and compute correlation and p-value
+
+# read data from KeyWestAnnualMeanTemperature.Rdata
+load(file = "/home/nelson/Documents/CMEECoursework/Week3/MyRCoursework/Data/KeyWestAnnualMeanTemperature.RData")
+
+# correlation
+correlation <- cor(ats)[2,1]
+
+# function of compute randomly permuting time series and calculate correlation
+random_correlation <- function(x){
+  a <- sample(x[,1],100) # random sample the 100 years of time series
+  b <- cbind(a,x[,2]) # combine sampled time series and original temperature
+  return(cor(b)[2,1]) # return the calculated correlation
+}
+
+# calculate the random correlation 10000 times
+RandCor <- sapply(1:10000, function(i) random_correlation(ats)) 
+
+# calculate the fraction of the correlation coefficients(p-value)
+p <- sum(RandCor > correlation)/10000
+\end{lstlisting}
+
+\begin{lstlisting}
+> correlation
+[1] 0.5331784
+> p
+[1] 0
+\end{lstlisting}
+
+\section{Results and conclusion}
+From the code above, the correlation calculated by the given R data is about 0.533. This number illustrates that there is likely to be a correlation between the time series and the temperature. We can see that more precisely by looking at another output variable, the p-value is 0 in this situation. In particular from our code, this p-value means if we randomly permute time series 10000 times, there is not a single time the random correlation will be bigger than the original correlation of the data. Therefore we can conclude that the temperature is positive correlated to the time series which is years in this case.
+
+
+
+
+\end{document}
