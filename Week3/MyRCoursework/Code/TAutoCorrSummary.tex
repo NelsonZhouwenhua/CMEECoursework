@@ -56,11 +56,11 @@ p <- sum(RandCor > correlation)/10000
 > correlation
 [1] 0.5331784
 > p
-[1] 0
+[1] 3e-03
 \end{lstlisting}
 
 \section{Results and conclusion}
-From the code above, the correlation calculated by the given R data is about 0.533. This number illustrates that there is likely to be a correlation between the time series and the temperature. We can see that more precisely by looking at another output variable, the p-value is 0 in this situation. In particular from our code, this p-value means if we randomly permute time series 10000 times, there is not a single time the random correlation will be bigger than the original correlation of the data. Therefore we can conclude that the temperature is positive correlated to the time series which is years in this case.
+From the code above, the correlation calculated by the given R data is about 0.326. This number illustrates that there is likely to be a correlation between the temperature of two successive years. We can see that more precisely by looking at another output variable, the p-value is 0.0003 in this situation. In particular from our code, this p-value means if we randomly permute time series 10000 times, there is only 3 times the random correlation will be bigger than the original correlation of the data. Generally if p-value is smaller than 0.05, there is a correlation between the temperature of two successive years. Therefore we can conclude that the temperature is positive correlated to the temperature one year before.
 
 
 

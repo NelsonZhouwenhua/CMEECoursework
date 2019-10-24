@@ -6,7 +6,7 @@ Date: 14/10~~20/10
 
 Chapter covered: Biological Computing in R, Data management
 
-Status: chapter covered and Chapter 7 practicals all done
+Status: chapter covered and practicals all done
 
 ###############################################################
 
@@ -100,6 +100,7 @@ get_TreeHeight.py
 # The python version of get_TreeHeight.R, get the tree height and write
 # as a csv file run by run_get_TreeHeight.sh
 
+
 Data directory:
 
 trees.csv 
@@ -107,7 +108,6 @@ trees.csv
 
 KeyWestAnnualMeanTemperature.Rdata
 # R data with annual mean temperature for autocorrelation practicals
-
 
 
 Results directory:
@@ -131,3 +131,111 @@ trees_treeheights.csv
 # R practicals results
 # save the results from get_TreeHeight.R takes a csv file name from the command line
 
+########################################
+
+Chapter 8: Data management, exploration and visualization
+
+Code directory:
+
+DataWrang.R
+# R script wrangling the given data from PoundHillData.csv
+
+DataWrangTidy.R
+# R practicals
+# use dplyr and tidyr to wrangle data
+
+PP_Lattice.R
+# R practicals
+# output 3 pdf files of lattice graphs
+# calculate mean and median by feeding type
+
+Girko.R
+# Plot two dataframes by Girko's circular law
+
+MyBars.R
+# example of annotating plots
+
+plotLin.R
+# example of mathematical display
+
+PP_Regress.R
+# R practicals
+# output the given figure 
+# do linear regression of predator type
+# write csv of linear regression data
+
+GPDD_Data.R
+# R practicals
+# use maps package to map
+
+PP_Regress_loc.R
+# R practicals
+# write a csv of the same in PP_Regress with one more filter location
+
+
+Data directory:
+
+PoundHillData.csv
+# pound hill data downloaded from repository
+
+PoundHillMetaData.csv
+# pound hill data file name and description downloaded from repository
+
+EcolArchives-E089-51-D1.csv
+# Ecological Archives data downloaded from repository
+
+Results.txt
+# downloaded data for annotating plots
+
+PGDDFiltered.Rdata
+# downloaded data for maps package to plot maps
+
+
+
+Results directory:
+
+Pred_Prey_Overlay.pdf
+# saved graphic of an example plot
+
+Pred_Lattice.pdf
+# R practicals
+# lattice graph of predator mass in logarithms
+
+Prey_Lattice.pdf
+# R practicals
+# lattice graph of prey mass in logarithms
+
+SizeRatio_Lattice.pdf
+# R practicals
+# lattice graph of size ratio in logarithms
+
+MyFirst-ggplot2-Figure.pdf
+# example of saving plot
+
+Girko.pdf
+# saved result figure of Girko.R
+
+MyBars.pdf
+# saved result figure of MyBars.R
+
+MyLinReg.pdf
+# saved result figure of plotLin.R
+
+PP_Regress.pdf
+# R practicals
+# saved result of the ggplot from PP_Regress.R
+
+PP_Results.csv
+# R practicals
+# saved mean and median log predator mass, prey mass, and size ratio
+# by feeding type
+
+PP_Regress_Results.csv
+# R practical results
+# saved csv file of linear regression data to different
+# feeding type and life stage combination
+
+PP_Regress_loc_Results.csv
+# R practical results
+# saved csv file of linear regression data to different
+# feeding type, life stage and location combination
