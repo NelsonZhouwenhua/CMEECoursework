@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 """python script to open a file and print lines(skip blank lines) in that file"""
 
 __appname__ = 'basic_io1.py'

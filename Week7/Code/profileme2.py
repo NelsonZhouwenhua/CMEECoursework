@@ -7,16 +7,19 @@ __author__ = 'Wenhua Zhou (wz2812@ic.ac.uk)'
 __version__ = '0.0.1'
 
 def my_squares(iters):
+    """ function for squares """
     out = [i ** 2 for i in range(iters)]
     return out
 
 def my_join(iters, string):
+    """ function to combine number and string """
     out = ''
     for i in range(iters):
         out += ", " + string
     return out
 
 def run_my_funcs(x,y):
+    """ function to run squares and combine string """
     print(x,y)
     my_squares(x)
     my_join(x,y)

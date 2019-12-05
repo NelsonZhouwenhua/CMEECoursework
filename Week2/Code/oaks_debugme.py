@@ -41,6 +41,7 @@ def is_an_oak(name):
     # we can filter that only genus named 'quercus' will be recorded as an oak
 
 def main(argv): 
+    """ Main entry point of the program """
     f = open('../Data/TestOaksData.csv','r')
     g = open('../Data/JustOaksData.csv','w')
     taxa = csv.reader(f)

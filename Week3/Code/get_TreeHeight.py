@@ -24,6 +24,7 @@ f.close()
 
 # define a function to calculate tree height
 def calculate_height(degrees, distance):
+    """ function to calculate tree height """
     radians = degrees * numpy.pi/180
     height = distance * numpy.tan(radians)
     print("Tree height is:" + str(height))

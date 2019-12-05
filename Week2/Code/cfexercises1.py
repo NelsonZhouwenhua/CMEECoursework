@@ -18,14 +18,17 @@ import sys
 
 # What does each of foo_x do? 
 def foo_1(x):
+    """ square root of input """
     return x ** 0.5 # calculate root of input variable
 
 def foo_2(x, y):
+    """ choose larger number """
     if x > y:
         return x
     return y # choose the larger output of two input variables
 
 def foo_3(x, y, z):
+    """ swap numbers """
     if x > y:
         tmp = y
         y = x
@@ -39,17 +42,20 @@ def foo_3(x, y, z):
 # if second is larger than third, swap positions for them
 
 def foo_4(x):
+    """ calculate the factorial of input """
     result = 1
     for i in range(1, x + 1):
         result = result * i
     return result # calculate the factorial of input
 
 def foo_5(x): # a recursive function that calculates the factorial of x
+    """ calculate the factorial of input """
     if x == 1:
         return 1
     return x * foo_5(x - 1) 
 
 def foo_6(x): # Calculate the factorial of x in a different way
+    """ calculate the factorial of input """
     facto = 1
     while x >= 1:
         facto = facto * x
@@ -57,6 +63,7 @@ def foo_6(x): # Calculate the factorial of x in a different way
     return facto
 
 def main(argv):
+    """ Main entry point of the program """
     print(foo_1(10))
     print(foo_2(10,2))
     print(foo_3(30,20,10))

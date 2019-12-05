@@ -58,3 +58,4 @@ legend(x=-1.5, y=-0.1, c("University","Hosting Partner", "Non-hosting Partner"),
        col="#777777", pt.bg=colrs, pt.cex=2, cex=.8, bty="n", ncol=1)
 
 dev.off()
+  

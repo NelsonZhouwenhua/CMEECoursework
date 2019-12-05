@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 """combination of the previous 3 scripts, read and save files"""
 
 __appname__ = 'basic_io.py'

@@ -14,12 +14,14 @@ import sys
 
 # print a 'hello' when integer smaller than variable x can be divided by 3
 def foo_1(x):
+    """print a 'hello' when integer smaller than variable x can be divided by 3"""
     for j in range(x):
         if j % 3 == 0:
             print('hello')
 
 # print a 'hello' when integer smaller than variable x can be divided by 4 or 5
 def foo_2(x):
+    """print a 'hello' when integer smaller than variable x can be divided by 4 or 5"""
     for j in range(x):
         if j % 5 == 3:
             print('hello')
@@ -28,6 +30,7 @@ def foo_2(x):
 
 # print a 'hello' each time and plus 3 for the variable z until z reaches 15
 def foo_3(z):
+    """print a 'hello' each time and plus 3 for the variable z until z reaches 15"""
     while z != 15:
         print('hello')
         z = z + 3
@@ -35,6 +38,7 @@ def foo_3(z):
 # add 1 to the variable z until z reaches 100,
 # print 7 'hello's when z = 31, abd print 'hello' when z = 18
 def foo_4(z):
+    """print 7 'hello's when z = 31, abd print 'hello' when z = 18"""
     while z < 100:
         if z == 31:
             for k in range(7):
@@ -45,6 +49,7 @@ def foo_4(z):
 
 # test arguments for the functions
 def main(argv):
+    """ Main entry point of the program """
     foo_1(12) # print 4 'hello's
     foo_2(15) # print 5 'hello's
     foo_3(0) # print 5 'hello's
@@ -52,5 +57,6 @@ def main(argv):
     return 0
 
 if __name__ == "__main__":
+    """Makes sure the "main" function is called from command line"""  
     status = main(sys.argv)
     sys.exit(status)

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
-'''python version of Vectorize2.R, 
-compute the computational speed between python and R'''
+"""python version of Vectorize2.R, 
+compute the computational speed between python and R"""
 
 __appname__ = 'Vectorize2.py'
 __author__ = 'Wenhua Zhou (wz2812@ic.ac.uk)'
@@ -13,7 +13,7 @@ import numpy
 import timeit
 
 def Stochrick(p0 = [random.uniform(0.5,1.5) for i in range(1000)], r = 1.2, K = 1, sigma = 0.2, numyears = 100):
-    '''Stochastic Ricker equation model, python edition'''
+    """Stochastic Ricker equation model, python edition"""
     N = numpy.zeros((numyears,len(p0))) # initialize
     N[1] = p0
 
@@ -23,8 +23,7 @@ def Stochrick(p0 = [random.uniform(0.5,1.5) for i in range(1000)], r = 1.2, K = 
     return(N)
 
 def Stochrickvect(p0 = [random.uniform(0.5,1.5) for i in range(1000)], r = 1.2, K = 1, sigma = 0.2, numyears = 100):
-    '''Stochastic Ricker vectorized model, python edition
-    use list comprehension instead'''
+    """Stochastic Ricker vectorized model, python edition, use list comprehension instead"""
     N = numpy.zeros((numyears,len(p0))) # initialize
     N[1] = p0
     
@@ -35,7 +34,7 @@ def Stochrickvect(p0 = [random.uniform(0.5,1.5) for i in range(1000)], r = 1.2, 
     return(N)
 
 def main(argv):
-    '''calculate the time taken use for loop and list comprehension'''
+    """calculate the time taken use for loop and list comprehension"""
     start = timeit.default_timer() # start timing
     Stochrick() # use for loop function to calculate matrix
     stop = timeit.default_timer() # stop timing

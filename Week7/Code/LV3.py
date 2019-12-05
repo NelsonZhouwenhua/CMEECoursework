@@ -12,14 +12,6 @@ import matplotlib.pylab as p
 import scipy.integrate as integrate
 import numpy as np
 
-# def dCR_dt(pops, t=0):
-
-#     R = pops[0]
-#     C = pops[1]
-#     dRdt = r * R * (1 - R/K) - a * R * C 
-#     dCdt = -z * C + e * a * R * C
-    
-#     return sc.array([dRdt, dCdt])
 
 # set default value
 r = 1.

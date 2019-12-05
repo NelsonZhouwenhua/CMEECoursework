@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 """python script to save the elements into a file"""
 
 __appname__ = 'basic_io2.py'

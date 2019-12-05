@@ -11,7 +11,7 @@ import matplotlib.pylab as p
 import scipy.integrate as integrate
 
 def dCR_dt(pops, t=0):
-
+    """ function calculating LV model """
     R = pops[0]
     C = pops[1]
     dRdt = r * R - a * R * C 

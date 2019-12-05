@@ -18,6 +18,7 @@ taxa = [ 'Quercus robur',
        ]
 
 def is_an_oak(name):
+    """ define if this is an oak """
     return name.lower().startswith('quercus ')
 
 ##Using for loops

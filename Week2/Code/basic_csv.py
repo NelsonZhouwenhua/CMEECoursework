@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 """python script to read csv files"""
 
 __appname__ = 'basic_csv.py'

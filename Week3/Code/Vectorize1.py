@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
-'''python version of Vectorize1.R, 
-compute the computational speed between python and R'''
+"""python version of Vectorize1.R, 
+compute the computational speed between python and R"""
 
 __appname__ = 'Vectorize1.py'
 __author__ = 'Wenhua Zhou (wz2812@ic.ac.uk)'
@@ -12,7 +12,7 @@ import numpy # package for create matrix and sum
 import timeit # package for calculating time
 
 def SumAllElements(M):
-    '''sum by for loops'''
+    """sum by for loops"""
     TotalSum = 0
     for i in range(numpy.shape(M)[0]):
         for j in range(numpy.shape(M)[1]):    
@@ -21,10 +21,10 @@ def SumAllElements(M):
 
 
 def main(argv):
-    '''set a random matrix by numpy'''
+    """set a random matrix by numpy"""
     M = numpy.random.rand(1000,1000)
 
-    '''calculate the time taken use for loop and in-built function'''
+    """calculate the time taken use for loop and in-built function"""
     start = timeit.default_timer() # start timing
     SumAllElements(M) # calculate sum
     stop = timeit.default_timer() # stop timing
