@@ -1,0 +1,79 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=2cm]{geometry}
+\usepackage[round,authoryear,sort]{natbib}
+\usepackage{amsmath}
+\renewcommand{\refname}{Bibliography}
+\linespread{1.25}
+
+
+% \title{Tree-sequence methods in Genealogical analysis of large whole-genome datasets}
+% \author{Wenhua Zhou}
+% \date{\today}
+
+\begin{document}
+\begin{titlepage}
+   \begin{center}
+       \vspace*{1cm}
+ 
+       {\huge \textbf{Tree-sequence methods in Genealogical analysis of large whole-genome datasets}}
+       
+       \vspace{0.5cm}
+       
+       CMEE MRes project
+       
+       \vspace{1.5cm}
+ 
+       \textbf{Wenhua Zhou}
+       
+       \vspace{0.5cm}
+       
+       \text{wz2812@ic.ac.uk}
+       
+       \vspace{1.5cm}
+       
+       \text{Supervisor: Professor Tim Barraclough}
+       
+       \vspace{0.5cm}
+       
+       \text{Co-supervisor: Dr. James Rosindell}
+       \vfill
+ 
+ 
+       \vspace{0.8cm}
+ 
+ 
+       Department of Life Sciences\\
+       Imperial College London\\
+       United Kingdom\\
+       \today
+ 
+   \end{center}
+\end{titlepage}
+
+
+\title{Tree-sequence methods in Genealogical analysis of large whole-genome datasets}
+\author{Wenhua Zhou}
+\date{\today}
+%\maketitle
+
+\section{Introduction}
+Genealogical analysis of DNA sequences is an increasingly popular task in evolutionary biology. There has been massive growth in the availability of whole-genome data, which brings the potential to infer useful information about the traits of this species. However, current methods performing accurate genealogical analysis are not computational efficient enough to be used on large datasets with many individuals and species. Recently, a tree-sequence recording method \citep{kelleher2016efficient} was introduced for large scale genetic data. This approach represents genome data in the form of correlated trees using efficient coalescent simulation. By this method, it manages to increase computational efficiency dramatically. We will adjust and implement the similar tree-sequence method into $Aspergillus$ whole-genome dataset from Imperial’s Department of Infectious Disease and Epidemiology.
+
+
+\section{Methodology}
+Compared to the ancestral recombination graphs \citep{griffiths1996ancestral}, tree sequences \citep{kelleher2019inferring} encodes a sequence of marginal trees instead of common ancestors and recombination events. Conventional data storage of a genomic variation dataset is a matrix, requiring sample size $n$ rows and site $m$ columns which need $O(mn)$ space. Instead, tree sequences represent the data as a marginal tree, which can be fully encoded by samples and ancestors with related mutation sites using only $O(n+m)$ space to store. An algorithm was developed \citep{kelleher2016efficient} to generate tree sequences and count sample size from stored data. \\
+A whole-genome dataset consists of millions of base pairs, and there are millions of sites per chromosome. Using tree sequences reduces the space of storing whole-genome dataset significantly, and this makes further genealogical analysis feasible. Additionally, tree-sequence data also provide comparable accuracy to ARGs and other current methods.\\
+However, original whole-genome data contains DNA sequences of million SNPs instead of genealogical trees. A pre-processing step with appropriate algorithms is therefore required to transform DNA sequences into trees. A huge amount of methods are developed to infer trees, distance methods and the principle of parsimony are the two most commonly used methods. Distance methods determine the trees by calculating the distance between DNA sequences, this can either be the proportion of differences or derived from sequence models. The principle of parsimony simply chooses the tree with the least number of mutations and recombination events after counting up the number of changes in each tree. Another common approach is by maximum likelihood analysis \citep{yang2007paml}, it generates a new tree and keeps rearranging itself until it optimizes the likelihood. 
+
+\section{Future work}
+There are a few other methods for generating trees such as Bayesian models using MCMC. These models generally provide solid approximations of trees but also requires more computational resources. When applying on $Aspergillus$ whole-genome data, comparison in different methods is essential to provide a suitable model with comparable accuracy and computational efficiency. \\
+After getting the whole-genome data by tree sequence methods, I will introduce evolution models on the encoded data to show the possibility of further genealogical analysis. I will also compute results and compare with previously existing methods. Using the results of those comparisons, I will discuss the strength and limitations of tree-sequence methods, and propose a few ideas to improve the method and models.  
+
+
+\renewcommand\bibname{Reference}
+\addcontentsline{toc}{chapter}{\bibname}
+\bibliographystyle{abbrvnat}
+\bibliography{bibtex}
+
+\end{document}
