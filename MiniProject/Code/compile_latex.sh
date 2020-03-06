@@ -6,7 +6,9 @@
 # Date: March 2020
 
 pdflatex report.tex
+pdflatex report.tex
 bibtex report
+pdflatex report.tex
 pdflatex report.tex
 
 ## Cleanup
