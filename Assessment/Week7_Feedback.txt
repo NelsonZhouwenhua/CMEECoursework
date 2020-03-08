@@ -13,7 +13,7 @@ Your Git repo size this week is about 31.58 MiB on disk
 
 PART 1: Checking project workflow...
 
-Found the following directories in parent directory: Week6, Week1, Week7, Assessment, Week5, Week2, Week4, .git, Week3, MiniProject
+Found the following directories in parent directory: Week6, Week1, Week7, Assessment, Week5, Week2, Week4, .git, Week3, Project, MiniProject
 
 Found the following files in parent directory: README.txt, .gitignore
 
@@ -258,7 +258,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.12936s
+Time consumed = 0.17885s
 
 ======================================================================
 Inspecting script file regexs.py...
@@ -429,7 +429,7 @@ Dr Cristin
 
 Code ran without errors
 
-Time consumed = 0.39649s
+Time consumed = 0.77729s
 
 ======================================================================
 Inspecting script file LV3.py...
@@ -450,14 +450,6 @@ import matplotlib.pylab as p
 import scipy.integrate as integrate
 import numpy as np
 
-# def dCR_dt(pops, t=0):
-
-#     R = pops[0]
-#     C = pops[1]
-#     dRdt = r * R * (1 - R/K) - a * R * C 
-#     dCdt = -z * C + e * a * R * C
-    
-#     return sc.array([dRdt, dCdt])
 
 # set default value
 r = 1.
@@ -523,11 +515,9 @@ LV3.py is a Python script file;
 
 checking for docstrings...
 
-Found one or more docstrings and functions
+Found no functions, but one docstring for the script, good
 
-Missing docstring, either in one or functions and/or at the script level
-
-Current Points = 99.5
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -538,7 +528,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.72916s
+Time consumed = 0.75983s
 
 ======================================================================
 Inspecting script file profileme2.py...
@@ -554,16 +544,19 @@ __author__ = 'Wenhua Zhou (wz2812@ic.ac.uk)'
 __version__ = '0.0.1'
 
 def my_squares(iters):
+    """ function for squares """
     out = [i ** 2 for i in range(iters)]
     return out
 
 def my_join(iters, string):
+    """ function to combine number and string """
     out = ''
     for i in range(iters):
         out += ", " + string
     return out
 
 def run_my_funcs(x,y):
+    """ function to run squares and combine string """
     print(x,y)
     my_squares(x)
     my_join(x,y)
@@ -579,9 +572,7 @@ checking for docstrings...
 
 Found one or more docstrings and functions
 
-Missing docstring, either in one or functions and/or at the script level
-
-Current Points = 98.0
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -592,7 +583,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 3.63990s
+Time consumed = 3.63613s
 
 ======================================================================
 Inspecting script file timeitme.py...
@@ -654,7 +645,7 @@ checking for docstrings...
 
 Found no functions, but one docstring for the script, good
 
-Current Points = 98.0
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -664,7 +655,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 10.00649s
+Time consumed = 10.00841s
 
 ======================================================================
 Inspecting script file blackbirds.py...
@@ -720,7 +711,7 @@ checking for docstrings...
 
 Found no functions, but one docstring for the script, good
 
-Current Points = 98.0
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -742,7 +733,7 @@ Species Turdus bou
 
 Code ran without errors
 
-Time consumed = 0.02975s
+Time consumed = 0.03244s
 
 ======================================================================
 Inspecting script file Nets.py...
@@ -865,7 +856,7 @@ checking for docstrings...
 
 Found no functions, but one docstring for the script, good
 
-Current Points = 98.0
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -910,7 +901,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.09289s
+Time consumed = 0.09556s
 
 ======================================================================
 Inspecting script file profileme.py...
@@ -926,18 +917,21 @@ __author__ = 'Wenhua Zhou (wz2812@ic.ac.uk)'
 __version__ = '0.0.1'
 
 def my_squares(iters):
+    """ function with squares """
     out = []
     for i in range(iters):
         out.append(i ** 2)
     return out
 
 def my_join(iters, string):
+    """ function combining strings """
     out = ''
     for i in range(iters):
         out += string.join(", ")
     return out
 
 def run_my_funcs(x,y):
+    """ function doing squares and combining strings """
     print(x,y)
     my_squares(x)
     my_join(x,y)
@@ -954,9 +948,7 @@ checking for docstrings...
 
 Found one or more docstrings and functions
 
-Missing docstring, either in one or functions and/or at the script level
-
-Current Points = 96.5
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -967,7 +959,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 6.47055s
+Time consumed = 6.44025s
 
 ======================================================================
 Inspecting script file LV4.py...
@@ -990,15 +982,6 @@ import numpy as np
 import scipy.stats
 
 
-
-# def dCR_dt(pops, t=0):
-
-#     R = pops[0]
-#     C = pops[1]
-#     dRdt = r * R * (1 - R/K) - a * R * C 
-#     dCdt = -z * C + e * a * R * C
-    
-#     return sc.array([dRdt, dCdt])
 
 # set default value
 r = 1.
@@ -1064,22 +1047,20 @@ LV4.py is a Python script file;
 
 checking for docstrings...
 
-Found one or more docstrings and functions
+Found no functions, but one docstring for the script, good
 
-Missing docstring, either in one or functions and/or at the script level
-
-Current Points = 96.0
+Current Points = 100
 
 Output (only first 500 characters): 
 
 **********************************************************************
-[ 28.94937655   0.55833357]
+[ 24.99487197   2.63021087]
 
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.87211s
+Time consumed = 0.82759s
 
 ======================================================================
 Inspecting script file fmr.R...
@@ -1123,7 +1104,7 @@ Finished in R!
 
 Code ran without errors
 
-Time consumed = 0.17456s
+Time consumed = 0.17885s
 
 ======================================================================
 Inspecting script file MyFirstJupyterNb.ipynb...
@@ -3724,7 +3705,7 @@ checking for docstrings...
 
 Found no functions, but one docstring for the script, good
 
-Current Points = 96.0
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -3734,7 +3715,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 4.49035s
+Time consumed = 4.58124s
 
 ======================================================================
 Inspecting script file LV1.py...
@@ -3754,7 +3735,7 @@ import matplotlib.pylab as p
 import scipy.integrate as integrate
 
 def dCR_dt(pops, t=0):
-
+    """ function calculating LV model """
     R = pops[0]
     C = pops[1]
     dRdt = r * R - a * R * C 
@@ -3809,9 +3790,7 @@ checking for docstrings...
 
 Found one or more docstrings and functions
 
-Missing docstring, either in one or functions and/or at the script level
-
-Current Points = 95.5
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -3821,7 +3800,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.75060s
+Time consumed = 0.73702s
 
 ======================================================================
 Inspecting script file LV5.py...
@@ -3844,15 +3823,6 @@ import numpy as np
 import scipy.stats
 
 
-
-# def dCR_dt(pops, t=0):
-
-#     R = pops[0]
-#     C = pops[1]
-#     dRdt = r * R * (1 - R/K) - a * R * C 
-#     dCdt = -z * C + e * a * R * C
-    
-#     return sc.array([dRdt, dCdt])
 
 # set default value
 r = 1.
@@ -3918,22 +3888,20 @@ LV5.py is a Python script file;
 
 checking for docstrings...
 
-Found one or more docstrings and functions
+Found no functions, but one docstring for the script, good
 
-Missing docstring, either in one or functions and/or at the script level
-
-Current Points = 95.0
+Current Points = 100
 
 Output (only first 500 characters): 
 
 **********************************************************************
-[ nan  nan]
+[ 17.60269499   1.80924096]
 
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.84727s
+Time consumed = 0.88883s
 
 ======================================================================
 Inspecting script file DrawFW.py...
@@ -3992,7 +3960,7 @@ checking for docstrings...
 
 Found one or more docstrings and functions
 
-Current Points = 95.0
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -4073,7 +4041,7 @@ legend(x=-1.5, y=-0.1, c("University","Hosting Partner", "Non-hosting Partner"),
        col="#777777", pt.bg=colrs, pt.cex=2, cex=.8, bty="n", ncol=1)
 
 dev.off()
-**********************************************************************
+  **********************************************************************
 
 Testing Nets.R...
 
@@ -4127,7 +4095,7 @@ checking for docstrings...
 
 Found no functions, but one docstring for the script, good
 
-Current Points = 95.0
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -4173,12 +4141,12 @@ checking for docstrings...
 
 Found no functions, but one docstring for the script, good
 
-Current Points = 95.0
+Current Points = 100
 
 Output (only first 500 characters): 
 
 **********************************************************************
-         529754 function calls (519860 primitive calls) in 0.738 seconds
+         529758 function calls (519864 primitive calls) in 0.749 seconds
 
    Ordered by: standard name
 
@@ -4227,7 +4195,7 @@ Traceback (most recent call last):
     prof.runctx(statement, globals, locals)
   File "/usr/lib/python3.5/cProfile.py", line 100, in runctx
     exec(cmd, globals, locals)
-  File "LV3.py", line 47, in <module>
+  File "LV3.py", line 39, in <module>
     R1 = R * (1 + r * (1 - R/K) - a * C)
 TypeError: unsupported operand type(s) for /: 'int' and 'str'
 
@@ -4250,7 +4218,7 @@ import matplotlib.pylab as p
 import scipy.integrate as integrate
 
 def dCR_dt(pops, t=0):
-
+    """ function calculating LV model """
     R = pops[0]
     C = pops[1]
     dRdt = r * R * (1 - R/K) - a * R * C 
@@ -4319,9 +4287,7 @@ checking for docstrings...
 
 Found one or more docstrings and functions
 
-Missing docstring, either in one or functions and/or at the script level
-
-Current Points = 94.5
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -4332,7 +4298,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.74994s
+Time consumed = 0.72004s
 
 ======================================================================
 Inspecting script file MyFirstJupyterNb-checkpoint.ipynb...
@@ -6854,6 +6820,6 @@ Ran into 5 errors
 
 FINISHED WEEKLY ASSESSMENT
 
-Current Points for the Week = 94.5
+Current Points for the Week = 100
 
 NOTE THAT THESE ARE POINTS, NOT MARKS FOR THE WEEK!

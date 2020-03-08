@@ -9,11 +9,11 @@ Note that:
 
 ======================================================================
 ======================================================================
-Your Git repo size this week is about 4.00 MiB on disk 
+Your Git repo size this week is about 31.58 MiB on disk 
 
 PART 1: Checking project workflow...
 
-Found the following directories in parent directory: Week1, Assessment, Week2, .git
+Found the following directories in parent directory: Week6, Week1, Week7, Assessment, Week5, Week2, Week4, .git, Week3, Project, MiniProject
 
 Found the following files in parent directory: README.txt, .gitignore
 
@@ -50,7 +50,7 @@ Hopefully I can learn more about programming this year, and this repository can 
 ======================================================================
 Looking for the weekly directories...
 
-Found 2 weekly directories: Week1, Week2
+Found 7 weekly directories: Week1, Week2, Week3, Week4, Week5, Week6, Week7
 
 The Week1 directory will be assessed 
 
@@ -63,17 +63,128 @@ Assessing WEEK1...
 
 Found the following directories: Code, Data, Sandbox, Results
 
-Found the following files: 
+Found the following files: README.txt
 
 Checking for readme file in weekly directory...
 
-README file missing, 1 pt deducted
+Found README in parent directory, named: README.txt
 
-Current Points = 99
+Printing contents of README.txt:
+**********************************************************************
+Week 1 summary
+
+Author: Wenhua Zhou (wz2812@ic.ac.uk)
+
+Date : 30/9~~4/10
+
+Chapters covered: UNIX, Shell scripting, Version control with Git, LaTeX
+
+Status: all chapters covered and all practicals done
+
+#########
+
+Chapter 1: Introduction to UNIX
+
+Code directory:
+
+UnixPrac1.txt 
+# the practical of UNIX chapter, data used are the fasta files in Data directory
+# 5 questions included
+# 1. Count how many lines in each lines
+# 2. Print E.coli genome starting from second lines
+# 3. Count the sequence length of E.coli genome
+# 4. Count the "ATGC" sequence in E.coli genome
+# 5. Compute the AT/GC ratio of E.coli genome
+
+
+Data directory:
+
+spawannxs.txt
+# a list of protected species downloaded from the Dr.Pawar's repository
+
+fasta files
+# 3 fasta files are downloaded and used in UNIX practical
+
+
+########
+
+Chapter 2: Shell scripting
+
+Code directory:
+
+boilerplate.sh
+# test of my first shell script
+
+tabtocsv.sh
+# a shell script to sub all tabs with commas and write into a new csv file
+
+variables.sh
+# examples script to show variables and read variables to do a simple addition
+
+MyExampleScipt.sh
+# example script which say hello user twice
+
+CountLines.sh
+# example script that count lines of other input files
+
+ConcatenateTwoFiles.sh
+# example script that merge two files into a new file
+
+tiff2png.sh
+# example script that convert .tif images into .jpg images
+
+csvtospace.sh
+# shell script exercise for the Shell scripting practical
+# takes a .csv file and converts to a .txt file with space separated values
+
+
+Data directory:
+
+csv files(1800.csv, 1801.csv, 1802.csv, 1803.csv)
+# downloaded csv files used to be converted into txt files for the practical
+
+csv.txt files
+# converted space separated values from csv files
+# runned by script done from practical csvtospace.sh
+
+
+#########
+
+Chapter 3: Version control with Git
+
+# Work is about git submission, update,gitignore and etc.
+# No new files done from Code and Data directory
+
+#########
+
+Chapter 4: LaTeX
+
+Code directory:
+
+FirstExample.tex
+# First LaTeX template 
+
+FirstBiblio.bib
+# First bibliography of my LaTeX template 
+
+FirstExample.pdf 
+# The output pdf of my LaTeX template
+# bibliography included
+
+FirstExample.bbl & FirstExample.blg
+# Produced files when I compile my LaTeX template
+
+CompileLaTeX.sh
+# shell script that compile the LaTeX template
+
+Data directory:
+
+# no files, not using any data in LaTeX
+**********************************************************************
 
 Found following files in results directory: ...
 
-Found 10 code files: ConcatenateTwoFiles.sh, .txt, CountLines.sh, variables.sh, tiff2png.sh, csvtospace.sh, MyExampleScript.sh, UnixPrac1.txt, tabtocsv.sh, boilerplate.sh
+Found 13 code files: ConcatenateTwoFiles.sh, .txt, CountLines.sh, variables.sh, CompileLaTeX.sh, tiff2png.sh, csvtospace.sh, FirstExample.tex, MyExampleScript.sh, FirstBiblio.bib, UnixPrac1.txt, tabtocsv.sh, boilerplate.sh
 
 ======================================================================
 Testing script/code files...
@@ -175,6 +286,86 @@ Encountered error (or warning):
 expr: syntax error
 
 ======================================================================
+Inspecting script file CompileLaTeX.sh...
+
+File contents are:
+**********************************************************************
+#!/bin/bash
+pdflatex $1.tex
+pdflatex $1.tex
+bibtex $1
+pdflatex $1.tex
+pdflatex $1.tex
+evince $1.pdf &
+
+## Cleanup
+rm *~
+rm *.aux
+rm *.dvi
+rm *.log
+rm *.nav
+rm *.out
+rm *.snm
+rm *.toc**********************************************************************
+
+Testing CompileLaTeX.sh...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/usr/share/texlive/texmf-dist/tex/latex/tools/.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
+File ignored)
+*
+! Emergency stop.
+<*> .tex
+        
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on .log.
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (pre
+**********************************************************************
+
+Encountered error (or warning):
+bibtex: Need exactly one file argument.
+Try `bibtex --help' for more information.
+rm: cannot remove '*~': No such file or directory
+rm: cannot remove '*.aux': No such file or directory
+rm: cannot remove '*.dvi': No such file or directory
+rm: cannot remove '*.log': No such file or directory
+rm: cannot remove '*.nav': No such file or directory
+rm: cannot remove '*.out': No such file or directory
+rm: cannot remove '*.snm': No such file or directory
+rm: cannot remove '*.toc': No such file or directory
+
+** (evince:12652): WARNING **: Error when getting information for file '/home/mhasoba/Documents/Teaching/IC_CMEE/2019-20/Coursework/StudentRepos/WenhuaZhou_WZ2812/Week1/Code/.pdf': No such file or directory
+
+** (evince:12652): WARNING **: Error setting file metadata: No such file or directory
+
+** (evince:12652): WARNING **: Error setting file metadata: No such file or directory
+
+** (evince:12652): WARNING **: Error setting file metadata: No such file or directory
+
+** (evince:12652): WARNING **: Error setting file metadata: No such file or directory
+
+** (evince:12652): WARNING **: Error setting file metadata: No such file or directory
+
+** (evince:12652): WARNING **: Error setting file metadata: No such file or directory
+
+** (evince:12652): WARNING **: Error setting file metadata: No such file or directory
+
+** (evince:12652): WARNING **: Error setting file metadata: No such file or directory
+
+** (evince:12652): WARNING **: Error setting file metadata: No such file or directory
+
+** (evince:12652): WARNING **: Error setting file metadata: No such file or directory
+
+** (evince:12652): WARNING **: Error setting file metadata: No such file or directory
+
+======================================================================
 Inspecting script file tiff2png.sh...
 
 File contents are:
@@ -233,7 +424,44 @@ Done!
 
 Code ran without errors
 
-Time consumed = 0.00390s
+Time consumed = 0.01009s
+
+======================================================================
+Inspecting script file FirstExample.tex...
+
+File contents are:
+**********************************************************************
+\documentclass[12pt]{article}
+
+\title{A Simple Document}
+
+\author{Your Name}
+
+\date{}
+
+\begin{document}
+  \maketitle
+  
+  \begin{abstract}
+    This paper must be cool!
+  \end{abstract}
+  
+  \section{Introduction}
+    Blah Blah!
+  
+  \section{Materials \& Methods}
+  One of the most famous equations is:
+  \begin{equation}
+    E = mc^2
+  \end{equation}
+  This equation was first proposed by Einstein in 1905 
+  \cite{einstein1905does}.
+  
+  \bibliographystyle{plain}
+  \bibliography{FirstBiblio}
+\end{document}**********************************************************************
+
+Testing FirstExample.tex...
 
 ======================================================================
 Inspecting script file MyExampleScript.sh...
@@ -262,7 +490,24 @@ Hello mhasoba
 
 Code ran without errors
 
-Time consumed = 0.00294s
+Time consumed = 0.00614s
+
+======================================================================
+Inspecting script file FirstBiblio.bib...
+
+File contents are:
+**********************************************************************
+@article{einstein1905does,
+  title={Does the inertia of a body depend upon its energy-content},
+  author={Einstein, Albert},
+  journal={Annalen der Physik},
+  volume={18},
+  number={13},
+  pages={639--41},
+  year={1905}
+}**********************************************************************
+
+Testing FirstBiblio.bib...
 
 ======================================================================
 Inspecting script file UnixPrac1.txt...
@@ -346,7 +591,7 @@ Done!
 
 Code ran without errors
 
-Time consumed = 0.00430s
+Time consumed = 0.00675s
 
 ======================================================================
 Inspecting script file boilerplate.sh...
@@ -377,19 +622,19 @@ This is a shell script!
 
 Code ran without errors
 
-Time consumed = 0.00335s
+Time consumed = 0.00526s
 
 ======================================================================
 ======================================================================
 Finished running scripts
 
-Ran into 4 errors
+Ran into 5 errors
 
 ======================================================================
 ======================================================================
 
 FINISHED WEEKLY ASSESSMENT
 
-Current Points for the Week = 99
+Current Points for the Week = 100
 
 NOTE THAT THESE ARE POINTS, NOT MARKS FOR THE WEEK!

@@ -1,0 +1,86 @@
+Starting weekly assessment for Wenhua, Week4
+
+Current Points = 100
+
+Note that: 
+(1) Major sections begin with a double "====" line 
+(2) Subsections begin with a single "====" line 
+(3) Code output or text file content are printed within single "*****" lines 
+
+======================================================================
+======================================================================
+Your Git repo size this week is about 31.58 MiB on disk 
+
+PART 1: Checking project workflow...
+
+Found the following directories in parent directory: Week6, Week1, Week7, Assessment, Week5, Week2, Week4, .git, Week3, Project, MiniProject
+
+Found the following files in parent directory: README.txt, .gitignore
+
+Checking for key files in parent directory...
+
+Found .gitignore in parent directory, great! 
+
+Printing contents of .gitignore:
+**********************************************************************
+*~ 
+*.tmp
+*.tif
+**********************************************************************
+
+Found README in parent directory, named: README.txt
+
+Printing contents of README.txt:
+**********************************************************************
+My CMEE Coursework Repository
+
+Author : Wenhua Zhou (wz2812@ic.ac.uk)
+
+This repository includes all the coursework I have done from the course MRes in Computational Methods in Ecology and Evolution. 
+
+This course begins in October 2019 and ends in September 2020. 
+
+Every week I will update the work I did including the practicals and miniprojects.
+
+Hopefully I can learn more about programming this year, and this repository can also be useful in the future.
+
+
+**********************************************************************
+
+======================================================================
+Looking for the weekly directories...
+
+Found 7 weekly directories: Week1, Week2, Week3, Week4, Week5, Week6, Week7
+
+The Week4 directory will be assessed 
+
+======================================================================
+======================================================================
+PART 2: Checking weekly code and workflow...
+
+======================================================================
+Assessing WEEK4...
+
+Found the following directories: 
+
+Found the following files: README.txt
+
+Checking for readme file in weekly directory...
+
+Found README in parent directory, named: README.txt
+
+Printing contents of README.txt:
+**********************************************************************
+**********************************************************************
+
+Code directory missing!
+Aborting this weeks assessment!
+
+======================================================================
+======================================================================
+
+FINISHED WEEKLY ASSESSMENT
+
+Current Points for the Week = 100
+
+NOTE THAT THESE ARE POINTS, NOT MARKS FOR THE WEEK!
